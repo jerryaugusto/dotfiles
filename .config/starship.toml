@@ -1,0 +1,221 @@
+# Replace the '❯ λ ' symbol in the prompt with '➜'
+[character]
+success_symbol = '[❯](bold #524f67)'
+error_symbol = '[❯](bold #eb6f92)'
+vimcmd_symbol = '[N](bold #9ccfd8)'
+vimcmd_replace_one_symbol = '[r](bold #f6c177)'
+vimcmd_replace_symbol = '[R](bold #f6c177)'
+vimcmd_visual_symbol = '[V](bold #908caa)'
+
+[cmd_duration]
+style = 'bold #f6c177'
+format = '[ﲊ $duration](#f6c177)' # 
+
+[directory]
+style = 'bold #31748f'
+truncation_length = 3
+truncate_to_repo = true
+use_logical_path = true
+fish_style_pwd_dir_length = 1
+disabled = false
+read_only = ' '
+
+[git_branch]
+style = 'bold #c4a7e7'
+symbol = '   ' # 🌱
+disabled = false
+
+[git_commit]
+style = '#908caa'
+commit_hash_length = 7
+tag_symbol = '🔖 '
+disabled = false
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold #eb6f92)'
+
+[git_metrics]
+added_style = 'bold #9ccfd8'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+# Configure the Git symbols
+[git_status]
+#  
+format = '([\[$all_status$ahead_behind \]]($style) )'
+style = 'bold #eb6f92'
+ahead = ' [ $count](#6e6a86)'
+up_to_date = ' [ $count](#31748f)'
+diverged = ' [](#eb6f92) [ $ahead_count  $behind_count](#6e6a86)'
+behind = ' [ $count](#6e6a86)'
+conflicted = ' [  $count]' # 🏳
+deleted = ' [🗑 $count](#eb6f92)'
+modified = ' [ $count](#908caa)' # 📝
+stashed = ' [ $count](#ebbcba)'
+staged = ' [ $count](#31748f)'
+renamed = ' [ $count](#ebbcba)' # 👅
+untracked = ' [ $count](#f6c177)'
+# prefix = '|'
+# suffix = ' | '
+# show_sync_count = true
+# conflicted_count.enabled = true
+# deleted_count.enabled = true
+# modified_count.enabled = true
+# stashed_count.enabled = true
+# staged_count.enabled = true
+# renamed_count.enabled = true
+# untracked_count.enabled = true
+
+[hostname]
+style = 'bold #9ccfd8'
+
+[username]
+format = '[$user]($style) on '
+style_user = 'bold #ebbcba'
+show_always = false
+disabled = true
+
+[jobs]
+symbol = '' #💠
+disabled = false
+
+[line_break]
+disabled = false
+
+# Configure the battery display
+[battery]
+full_symbol = ''
+charging_symbol = ''
+discharging_symbol = ''
+[[battery.display]]
+threshold = 15
+style = 'bold #eb6f92'
+
+[aws]
+symbol = '  '
+style = 'bold #908caa'
+
+[buf]
+symbol = ' '
+
+[c]
+symbol = ' '
+
+[conda]
+symbol = ' '
+
+[dart]
+symbol = ' '
+
+[docker_context]
+symbol = ' '
+
+[elixir]
+symbol = ' ' # 
+
+[elm]
+symbol = ' '
+
+[golang]
+symbol = ' '
+
+[guix_shell]
+symbol = ' '
+
+[haskell]
+symbol = ' '
+
+[haxe]
+symbol = '⌘ '
+
+[hg_branch]
+symbol = ' '
+
+[java]
+symbol = ' '
+
+[julia]
+symbol = ' '
+
+[lua]
+symbol = ' ' # 
+
+[memory_usage]
+disabled = false
+symbol = '[ ](#524f67)'
+style = '#524f67'
+
+[meson]
+symbol = '喝 '
+
+[nim]
+symbol = ' '
+
+[nix_shell]
+symbol = ' '
+
+[nodejs]
+symbol = ' ' #
+
+[os.symbols]
+Alpine = ' '
+Amazon = ' '
+Android = ' '
+Arch = ' '
+CentOS = ' '
+Debian = ' '
+DragonFly = ' '
+Emscripten = ' '
+EndeavourOS = ' '
+Fedora = ' '
+FreeBSD = ' '
+Garuda = '﯑ '
+Gentoo = ' '
+HardenedBSD = 'ﲊ '
+Illumos = ' '
+Linux = ' '
+Macos = ' '
+Manjaro = ' '
+Mariner = ' '
+MidnightBSD = ' '
+Mint = ' '
+NetBSD = ' '
+NixOS = ' '
+OpenBSD = ' '
+openSUSE = ' '
+OracleLinux = ' '
+Pop = ' '
+Raspbian = ' '
+Redhat = ' '
+RedHatEnterprise = ' '
+Redox = ' '
+Solus = 'ﴱ '
+SUSE = ' '
+Ubuntu = ' '
+Unknown = ' '
+Windows = ' '
+
+[os]
+disabled = true
+
+[package]
+symbol = ' '
+
+[python]
+symbol = ' '
+
+[rlang]
+symbol = 'ﳒ '
+
+[ruby]
+symbol = ' '
+
+[rust]
+symbol = ' '
+
+[scala]
+symbol = ' '
+
+[spack]
+symbol = '🅢 '
+

@@ -1,0 +1,67 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environments
+.env
+.venv/
+env/
+
+# GUI applications
+*.app
+
+# JetBrains
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python pip
+pip-selfcheck.json
+
+# Shell
+*.log
+*.swp
+
+# Vim/Neovim
+*.swp
+*.swo
+
+# Django
+db.sqlite3
+*.log
+media/
+
+# Flask
+instance/
+
+# FastAPI
+tmp/
+
+# React
+build/
+
+# HTML/CSS/JS
+*.min.js
+*.min.css
+
+# Data Science
+*.ipynb_checkpoints/
+.DS_Store
+
+# Ignored files
+*.un~
+*.swp
+*.swo
+*~
+

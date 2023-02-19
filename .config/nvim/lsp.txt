@@ -1,0 +1,48 @@
+
+-- LANGUAGES SERVER PROTOCOL
+-- TypeScript
+if extension == "ts" or extension == "tsx" or extension == "js" or extension == "jsx" then
+  print('LSP loaded by TS/JS file')
+  require'lspconfig'.tsserver.setup {}
+end
+
+-- Elixir
+if extension == "ex" or extension == "exs" or extension == "eex" then
+  print('LSP loaded by Elixir file')
+  require'lspconfig'.elixirls.setup {
+    cmd = { "elixir-ls" }
+  }
+end
+
+-- Golang
+if extension == "go" or extension == "gomod" or extension == "gowork" or extension == "gotmpl" then
+  print('LSP loaded by Go file')
+  require'lspconfig'.gopls.setup {}
+end
+
+-- Rust
+if extension == "rs" then
+  require'lspconfig'.rust_analyzer.setup {}
+end
+
+-- JSON
+if extension == "json" or extension == "jsonc" then
+  require'lspconfig'.jsonls.setup {}
+end
+
+-- GraphQL
+if extension == ".graphqlrc*" or extension == ".graphql.config.*" or extension == "graphql.config.*" then
+  require'lspconfig'.graphql.setup {}
+end
+
+-- Lua
+if extension == "lua" then
+  print('LSP loaded by Lua file')
+  require'lspconfig'.sumneko_lua.setup {}
+end
+
+-- Bash
+if extension == "sh" then
+  print('LSP loaded by Bash file')
+  require'lspconfig'.bashls.setup {}
+end

@@ -1,0 +1,78 @@
+history
+cp extra/completions/alacritty.fish $fish_complete_path[1]/alacritty.fish
+mkdir -p $fish_complete_path[1]
+cargo install alacritty
+curl https://sh.rustup.rs -sSf | sh
+sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+reset
+rm bootstrap.sh
+ls -a
+exit
+curl -sS https://starship.rs/install.sh | sh
+sudo apt update && sudo apt upgrade -y
+reset
+vim ~/workspace/playground/python/dundie-rewards/dundie/core.py
+nvim ~/workspace/playground/python/dundie-rewards/dundie/core.py
+~
+la
+ll
+sudo apt install exa
+vim ~/.config/fish/aliases/main.fish
+vim dundie/core.py
+ls -a
+cd dundie-rewards/
+git clone https://github.com/rochacbruno/dundie-rewards
+mkd python
+mkd playground
+mkd workspace
+git status
+vim bootstrap.sh
+cd dotfiles/
+vim ~/.config/fish/config.fish
+vim
+source ~/.config/fish/aliases/main.fish
+lvim ~/.config/fish/aliases/main.fish
+bash
+LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
+LV_BRANCH='release-1.2/neovim-0.8' bash (curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
+bash (curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+brew install node
+sudo luarocks install luafilesystem
+luarocks install luafilesystem
+sudo apt install luarocks
+brew remove luarocks
+brew install luarocks
+vim install.sh
+lua -v
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+vim -V
+brew install tree-sitter
+brew install nvim-tree-sitter
+brew install treesitter
+brew install nvim-treesitter
+brew install --HEAD neovim
+brew install neovim-nightly
+brew install --cask neovim-nightly
+brew --cask install neovim-nightly
+brew cask install neovim-nightly
+brew tap jason0x43/homebrew-neovim-nightly
+sudo apt-get install build-essential procps curl file git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+snap connect nordpass:password-manager-service
+sudo snap install nordpass
+less install.sh
+mv install.sh dotfiles/
+pwd
+history >> install.sh
+history
+cp extra/completions/alacritty.fish $fish_complete_path[1]/alacritty.fish
+mkdir -p $fish_complete_path[1]
+cargo install alacritty
+curl https://sh.rustup.rs -sSf | sh
+sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+rm bootstrap.sh
+exit
+curl -sS https://starship.rs/install.sh | sh
+sudo apt update && sudo apt upgrade -y
