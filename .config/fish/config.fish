@@ -177,8 +177,6 @@ set -gx GPG_TTY (tty)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/araujo/miniconda3/bin/conda
-    eval /home/araujo/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-end
+eval /home/araujo/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 

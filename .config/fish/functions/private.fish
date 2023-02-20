@@ -91,7 +91,7 @@ end
 
 # Anaconda fish integrate
 function condafish
-  $HOME/miniconda3/condabin/conda init fish
+  $HOME/anaconda3/condabin/condafish init fish
 end
 
 # function pomodoro
