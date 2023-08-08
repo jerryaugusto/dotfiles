@@ -11,6 +11,11 @@ if test -e $BUN_INSTALL
   set -gx PATH $BUN_INSTALL/bin $PATH
 end
 
+# Composer
+if test -e /home/araujo/.config/composer/vendor/bin
+  set -gx PATH $HOME/.config/composer/vendor/bin $PATH
+end
+
 # Golang
 if test -e /usr/local/go/bin
   set -gx PATH /usr/local/go/bin $PATH

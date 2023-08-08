@@ -22,8 +22,14 @@ alias lt 'ls --tree'
 alias ld 'exa --only-dirs --icons --group-directories-first --header --all'
 alias lg 'exa --git --git-ignore --icons --group-directories-first --header --long --all'
 
+# Work
+alias gh 'history | ripgrep'
+alias left 'ls -t -1'
+alias cnt 'find . -type f | wc -l'
+alias cpv 'rsync -ah --info=progress2'
 alias fdir 'find . -type d -name'
 alias ff 'find . -type f -name'
+alias rt 'mv --force -t ~/.local/share/Trash '
 alias rm 'rm -i'
 alias rmf 'rm -rf'
 alias free 'free -h'
@@ -36,6 +42,27 @@ alias disk 'df -h | grep sd \
     | sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" \
     | sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
 alias preview 'fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
+
+# PHP
+alias pa 'php artisan'
+
+# Git
+alias sgit 'cd `git rev-parse --show-toplevel` && git checkout master && git pull'
+alias cg 'cd "git rev-parse --show-toplevel"'
+# alias gst 'git status'
+# alias ga 'git add .'
+# alias gk 'git checkout'
+# alias gc 'git commit'
+# alias gm 'git commit -m'
+# alias gp 'git pull'
+# alias gpr 'git pull --rebase'
+# alias gps 'git push'
+# alias gl 'git log --oneline --decorate --color --graph'
+# alias gb 'git log --show-signature -1'
+# alias nah 'git reset --soft HEAD-1'
+# alias wip 'git add .;git commit -m "wip" > /dev/null'
+# alias gclean 'git branch --merged | ripgrep -v "\*" | xargs -n 1 git branch -d'
+# alias gr 'git reset HEAD^'
 
 # Dev tolls
 alias pm 'pnpm'

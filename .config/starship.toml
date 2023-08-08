@@ -7,7 +7,7 @@ palette = "catppuccin_mocha"
 
 # Setups
 format="$directory$git_branch$character"
-right_format = """$git_status$cmd_duration"""
+right_format = """$php$git_status$cmd_duration"""
 add_newline = true
 
 # Other languages configurations:
@@ -24,8 +24,11 @@ nodejs.disabled = true
 java.disabled = true
 golang.disabled = true
 
-[conda]
-format = ' [$symbol$environment](dimmed green) '
+[php]
+format = " []($style)[$symbol$version](bg:base fg:mauve)[]($style) "
+style = "bg:none fg:base"
+symbol = '󰟆 '
+disabled = false
 
 # Prompt symbols
 [character]
@@ -36,7 +39,7 @@ vicmd_symbol = "[](peach)"
 [directory]
 format = "[]($style)[ ](bg:base fg:pink)[$path](bg:base fg:lavender bold)[ ]($style)"
 style = "bg:none fg:base"
-truncation_length = 3
+truncation_length = 1
 truncate_to_repo = false
 use_logical_path = true
 fish_style_pwd_dir_length = 1

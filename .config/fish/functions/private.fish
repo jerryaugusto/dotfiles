@@ -30,15 +30,16 @@ function mkd
 end
 
 # Git
-function sc
+function gint
   set message $argv
 
   if ! test -d .git
-    set message "Initial commit."
+    set message "initial commit"
     git init
   end
 
   git add .
+  set message "chore: commit save point"
   git commit -m $message
   git checkout -b dev
 end
@@ -97,6 +98,26 @@ function pomodoro
   timer $duration -n "$argv "
   paplay $HOME/Music/windowsphone-ringtone.mp3
   echo $val "session done. "
+end
+
+# PHP
+function server
+  php -S localhost:$argv[1] $argv[2] $argv[3]
+end
+
+# Change directories and view the contents at the same time
+function j
+    set -l DIR $argv
+
+    # if no DIR given, go home
+    if test (count $argv) -lt 1
+        set DIR $HOME
+    end
+
+    # builtin cd $DIR; and \
+    z $DIR
+    clear
+    # use your preferred ls command
 end
 
 # Anaconda fish integrate

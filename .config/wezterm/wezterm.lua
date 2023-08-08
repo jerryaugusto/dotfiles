@@ -168,7 +168,7 @@ return {
 	inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
 	-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	-- window_decorations = "RESIZE", -- NONE, RESIZE, TITLE
-	window_background_opacity = 0.5,
+	window_background_opacity = 0.75,
 	window_close_confirmation = "NeverPrompt",
 	window_frame = { active_titlebar_bg = "#45475a", font = font_with_fallback(font_name, { bold = true }) },
 }

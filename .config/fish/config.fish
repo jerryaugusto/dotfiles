@@ -1,4 +1,10 @@
 ## Environment Variables and Shell Behavior Configurations
+## Custom Functions
+
+# Load private config
+if test -e $HOME/.config/fish/functions/private.fish
+    source $HOME/.config/fish/functions/private.fish
+end
 
 # PATH configurations
 if test -f $HOME/.config/fish/exports/path.fish
@@ -70,12 +76,6 @@ set __fish_git_prompt_showuntrackedfiles yes
 set __fish_git_prompt_show_informative_status yes
 set __fish_git_prompt_showupstream yes
 
-## Custom Functions
-
-# Load private config
-if test -e $HOME/.config/fish/private.fish
-    source $HOME/.config/fish/private.fish
-end
 # ASDF Version Manager
 source /opt/asdf-vm/asdf.fish
 
@@ -262,3 +262,7 @@ end
 # set --export BUN_INSTALL "$HOME/.bun"
 # set --export PATH $BUN_INSTALL/bin $PATH
 # pls
+
+# >>> coursier install directory >>>
+set -gx PATH "$PATH:/home/araujo/.local/share/coursier/bin"
+# <<< coursier install directory <<<
