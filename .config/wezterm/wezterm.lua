@@ -20,7 +20,7 @@ return {
 	font = font_with_fallback(font_name),
 	font_rules = {
 		{
-      italic = false,
+      italic = true,
       intensity = 'Normal',
 			font = font_with_fallback(font_name, { weight = 'Regular' }),
 		},
