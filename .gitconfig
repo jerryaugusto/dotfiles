@@ -60,6 +60,7 @@
 	colz = !git checkout @{-1} && git submodule update --init --recursive
 	comz = !git checkout master && git submodule update --init --recursive
 	plz = !git pull && git submodule update --init --recursive
+	project-summary = !which onefetch && onefetch
 
 [interactive]
 	diffFilter = delta --color-only --features=interactive

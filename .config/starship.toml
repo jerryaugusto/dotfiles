@@ -5,9 +5,12 @@
 # Sets user-defined palette
 palette = "catppuccin_mocha"
 
+command_timeout = 1000
+scan_timeout = 1000
+
 # Setups
 format="$directory$git_branch$character"
-right_format = """$php$git_status$cmd_duration"""
+right_format = """$elixir$golang$git_status$cmd_duration"""
 add_newline = true
 
 # Other languages configurations:
@@ -22,12 +25,18 @@ package.disabled = true
 lua.disabled = true
 nodejs.disabled = true
 java.disabled = true
-golang.disabled = true
+# golang.disabled = true
 
-[php]
+[elixir]
 format = " []($style)[$symbol$version](bg:base fg:mauve)[]($style) "
 style = "bg:none fg:base"
-symbol = '󰟆 '
+symbol = ' '
+disabled = false
+
+[golang]
+format = " []($style)[$symbol$version](bg:base fg:lavender)[]($style) "
+style = "bg:none fg:base"
+symbol = ' '
 disabled = false
 
 # Prompt symbols

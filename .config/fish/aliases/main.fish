@@ -13,17 +13,17 @@ alias 4 'cd -4'
 alias 5 'cd -5'
 
 # Easy report
-alias ls 'lsd'
+alias ls 'eza --icons --long'
 
 alias l 'ls -l'
-alias la 'ls -a'
-alias lla 'ls -la'
+alias la 'ls --all'
+alias lla 'ls --list -all'
 alias lt 'ls --tree'
-alias ld 'exa --only-dirs --icons --group-directories-first --header --all'
-alias lg 'exa --git --git-ignore --icons --group-directories-first --header --long --all'
+alias ld 'eza --only-dirs --icons --group-directories-first --header --all'
+alias lg 'eza --git --git-ignore --icons --group-directories-first --header --long --all'
 
 # Work
-alias gh 'history | ripgrep'
+alias hrg 'history | ripgrep'
 alias left 'ls -t -1'
 alias cnt 'find . -type f | wc -l'
 alias cpv 'rsync -ah --info=progress2'
@@ -67,24 +67,25 @@ alias cg 'cd "git rev-parse --show-toplevel"'
 # Dev tolls
 alias pm 'pnpm'
 alias yolo 'rm -rf node_modules/ && rm package-lock.json && pm install'
-alias playground 'cd ~/workstation/playground/ && lsd -a'
-alias study 'cs ~/workstation/study/ && lsd -a'
+alias playground 'cd ~/workstation/playground/ && eza -a'
+alias study 'cs ~/workstation/study/ && eza -a'
 
 # alias break 'pomo break'
 alias work 'pomo work'
 # alias -g G '| ripgrep'
 
 # Bookmarks
-alias dl 'cd ~/Downloads && exa --long --all'
-alias doc 'cd ~/Documents && lsd -la'
-alias space 'cd ~/workspace && lsd -la'
+alias dl 'cd ~/Downloads && eza --long --all'
+alias doc 'cd ~/Documents && eza -la'
+alias space 'cd ~/workspace && eza -la'
 alias dfs 'cd ~/dotfiles && clear && lg -G'
 
 #Shortcuts
 alias :q 'exit'
 # alias pls "please"
-alias sudoedit "pleaseedit"
+# alias sudoedit "pleaseedit"
 alias cat 'bat'
+# alias vim 'lvim'
 alias vim 'nvim'
 # alias pip 'pip3'
 alias af 'asdf'

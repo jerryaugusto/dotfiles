@@ -1,3 +1,0 @@
-pane	0	1	1	:*	1	gh auth login ~/dotfiles	:/home/araujo/dotfiles	1	gh	:gh auth login
-window	0	1	:gh	1	:*	b5be,150x33,0,0,1	:
-state	0	

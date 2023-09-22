@@ -1,10 +1,38 @@
-# Debian update/grade packages
+# Unix update/grade packages
 function fup
-  sudo apt update
-  sudo apt upgrade
   brew update
-  brew upgrade
+  rustup update
+  cargo update
+  fisher update
   omf update
+
+  uname -mrs > /tmp/uname_output.txt
+
+  if grep -q "MANJARO" /tmp/uname_output.txt
+    echo -e '\a'
+    echo -e "\e[32mUpgrade Manjaro System...\e[0m"
+    sudo pacman -Syu
+    paru -Syu # --sync --answer --upgrade
+    paru -Yc # --refresh --clean
+    paru -Ps # --cleanall --search
+    paru -Qtdq | paru -Rns - # --query --unrequired --deps --quiet | sudo pacman --remove --noconfirm --recursive -
+    # sudo pacman --query --unrequired --deps --quiet | sudo pacman --remove --noconfirm --recursive -
+
+    echo -e "Finished."
+    echo -e "\e[32mSystem completely updated successfully! \e[0m"
+    # return
+  end
+
+  if grep -q "DEBIAN" /tmp/uname_output.txt ; "UBUNTU" /tmp/uname_output.txt
+    sudo apt update
+    sudo apt upgrade
+    brew update
+    brew upgrade
+
+    # return
+  end
+
+  rm /tmp/uname_output.txt
 end
 
 # Clean Debian unused packages
@@ -13,15 +41,6 @@ function apt-clean
   sudo apt-get autoclean
   sudo apt-get autoremove
   sudo apt --fix-broken install
-end
-
-# Arch update
-function upd
-  sudo pacman -Syu
-  paru -Syu
-  sudo pacman -Qtdq | sudo pacman -Rns -
-  paru -Yc
-  paru -Ps
 end
 
 # Create a new directory and enter it
@@ -81,23 +100,28 @@ function fweather
   curl -s 'https://wttr.in' | sed -n '1,27p'
 end
 
-
 function pomodoro
-  # Armazena o primeiro argumento do usuário
-  set val $argv
-  set duration "5s"
+  set counter 1
+  while test $counter -le 4
+    # Armazena o primeiro argumento do usuário
+    set val $argv
+    set duration "3s"
 
-  # Verifica se o valor é "work" ou não
-  if test "$val" = "work"
-    set duration "45m"
+    # Verifica se o valor é "work" ou não
+    if test "$val" = "work"
+      set duration "45m"
+    end
+
+    # Chama o comando "timer" com o tempo desejado
+    clear
+    echo $counter"/4 " $argv
+    timer $duration -n "$argv  "
+    echo -e '\a'
+    paplay $HOME/Music/denkatcha.mp3
+    echo $val "session done. "
+
+    set counter (math $counter + 1)
   end
-
-  # Chama o comando "timer" com o tempo desejado
-  clear
-  echo $argv
-  timer $duration -n "$argv "
-  paplay $HOME/Music/windowsphone-ringtone.mp3
-  echo $val "session done. "
 end
 
 # PHP
@@ -106,7 +130,7 @@ function server
 end
 
 # Change directories and view the contents at the same time
-function j
+function g
     set -l DIR $argv
 
     # if no DIR given, go home

@@ -1,3 +1,0 @@
-pane	0	1	1	:*	1	~/Colloid-icon-theme	:/home/araujo/Colloid-icon-theme	1	fish	:
-window	0	1	:fish	1	:*	ca7e,169x37,0,0,1	:
-state	0	

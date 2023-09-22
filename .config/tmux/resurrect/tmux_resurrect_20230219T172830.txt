@@ -1,3 +1,0 @@
-pane	0	1	1	:*	1	./balenaEtcher-1.14. ~/Downloads	:/home/araujo/Downloads	1	bash	:/bin/bash /tmp/.mount_balenaBMQZcB/balena-etcher
-window	0	1	:bash	1	:*	b5be,150x33,0,0,1	:
-state	0	

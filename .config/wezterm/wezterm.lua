@@ -7,7 +7,12 @@ end
 
 -- local font_name = "BlexMono Nerd Font"
 -- local font_name = "Input Mono"
-local font_name = "JetBrainsMono Nerd Font"
+-- local font_name = "IosevkaTerm Nerd Font"
+local font_name = "Iosevka Nerd Font"
+-- local font_name = "FiraCode Nerd Font"
+-- local font_name = "FiraMono Nerd Font"
+-- local font_name = "Inconsolata Nerd Font"
+-- local font_name = "JetBrainsMono Nerd Font"
 -- local font_name = "SauceCodePro Nerd Font"
 
 return {
@@ -20,17 +25,17 @@ return {
 	font = font_with_fallback(font_name),
 	font_rules = {
 		{
-      italic = true,
-      intensity = 'Normal',
-			font = font_with_fallback(font_name, { weight = 'Regular' }),
+			italic = true,
+			intensity = "Normal",
+			font = font_with_fallback(font_name, { weight = "Regular" }),
 		},
 		{
-      intensity = 'Bold',
-			font = font_with_fallback(font_name, { weight = 'Black' }),
+			intensity = "Bold",
+			font = font_with_fallback(font_name, { weight = "Black" }),
 		},
 		{
 			italic = true,
-			font = font_with_fallback(font_name, { weight = 'Light' }),
+			font = font_with_fallback(font_name, { weight = "Light" }),
 		},
 		-- {
 		-- 	intensity = "Bold",
@@ -38,7 +43,7 @@ return {
 		-- },
 	},
 	warn_about_missing_glyphs = false,
-	font_size = 10,
+	font_size = 11,
 	line_height = 1.1,
 	dpi = 96.0,
 
@@ -168,7 +173,7 @@ return {
 	inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
 	-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	-- window_decorations = "RESIZE", -- NONE, RESIZE, TITLE
-	window_background_opacity = 0.75,
+	-- window_background_opacity = 0.75,
 	window_close_confirmation = "NeverPrompt",
 	window_frame = { active_titlebar_bg = "#45475a", font = font_with_fallback(font_name, { bold = true }) },
 }

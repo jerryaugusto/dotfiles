@@ -1,6 +1,8 @@
 ## Environment Variables and Shell Behavior Configurations
 ## Custom Functions
 
+set -x fish_ignore '^reboot$'
+
 # Load private config
 if test -e $HOME/.config/fish/functions/private.fish
     source $HOME/.config/fish/functions/private.fish
@@ -12,6 +14,9 @@ if test -f $HOME/.config/fish/exports/path.fish
 end
 
 # Other environment variables
+
+set -x OPENAI_API_KEY (pass show job/chatgpt/api/token)
+# set -x GITHUB_TOKEN (pass show github/api/token)
 
 set FISH_DIR $HOME/.config/fish
 
@@ -80,11 +85,6 @@ set __fish_git_prompt_showupstream yes
 source /opt/asdf-vm/asdf.fish
 
 ## Theme and Appearance Configurations
-
-# Starship
-starship init fish | source
-# Zoxide cd alternative
-zoxide init fish | source
 
 # Colors configurations
 # Fuzzy Finder
@@ -159,18 +159,6 @@ end
 
 
 ## Scripts
-# if test $POMO_STATE == "COMPLETE"
-#   paplay $HOME/Music/windowsphone-ringtone.mp3
-# end
-
-# Fix pulseaudio bug
-# systemctl --user --now enable pulseaudio.service pulseaudio.socket
-
-
-
-# if test -e $HOME/miniconda3/condabin/conda
-#   source $HOME/miniconda3/condabin/conda
-# end
 
 # set -x BAT_THEME Dracula
 
@@ -266,3 +254,9 @@ end
 # >>> coursier install directory >>>
 set -gx PATH "$PATH:/home/araujo/.local/share/coursier/bin"
 # <<< coursier install directory <<<
+
+# Starship
+starship init fish | source
+# Zoxide cd alternative
+zoxide init fish | source
+

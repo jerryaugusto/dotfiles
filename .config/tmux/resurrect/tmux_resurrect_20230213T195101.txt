@@ -1,3 +1,0 @@
-pane	0	1	1	:*	1	~/w/p/g/gRPC-studies-go	:/home/araujo/workspace/playground/go/gRPC-studies-go	1	fish	:
-window	0	1	:fish	1	:*	b5be,150x33,0,0,1	:
-state	0	
