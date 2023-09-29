@@ -9,7 +9,7 @@ command_timeout = 1000
 scan_timeout = 1000
 
 # Setups
-format="$directory$git_branch$character"
+format = "$directory$git_branch$character"
 right_format = """$elixir$golang$git_status$cmd_duration"""
 add_newline = true
 
@@ -42,7 +42,7 @@ disabled = false
 # Prompt symbols
 [character]
 success_symbol = "[](green bold)" # 
-error_symbol = "[](red bold)" # 
+error_symbol = "[](red bold)"     # 
 vicmd_symbol = "[](peach)"
 
 [directory]
@@ -53,7 +53,7 @@ truncate_to_repo = false
 use_logical_path = true
 fish_style_pwd_dir_length = 1
 disabled = false
-read_only = ' ' # 
+read_only = ' '                                                                         # 
 
 [git_branch]
 format = "[]($style)[[ ](bg:base fg:green bold)$branch](bg:base fg:lavender)[ ]($style)" #     󰹦 
@@ -63,17 +63,17 @@ style = "bg:none fg:base"
 # $all status$ahead_behind
 format = "[]($style)[$all_status$ahead_behind](bg:base fg:yellow)[ ]($style)"
 style = "bg:none fg:base"
-conflicted = " 󰿡 " #     󰓡 󰆗
-ahead =	" 󰬬 ${count}" # ⇡  󰬬 󱦳
-behind = " 󰬦 ${count}" # ⇣  󰬦 󱦲 
-diverged = " 󰿣 󰬬 ${ahead_count}󰬦${behind_count}" # ⇕ ⇡ ⇣ 󰿣 󰬬 
-up_to_date = " 󱠇 " #    󰆢 󱓻  󰞑   󰞑 󰸠 󰥱 󰻂
-untracked = " 󰅙 ${count}" # ?  󱧧 󰓨 
-stashed = " 󰗠 " #     󱗛 
-modified = " 󱍷 ${count}" #   󱍸 󰣂 󰃨 󰑥  󰟃
-staged = " 󰐗 ${count}" #    󰁪 󰓦 󰪥 󰮔
-renamed = " 󰀨 ${count}" # »   󰣁 󰑤 󰋚 
-deleted = " 󰍶 ${count}" #     󰜺 󰓧 󰚃
+conflicted = " 󰿡 "                                                              #     󰓡 󰆗
+ahead = " 󰬬 ${count}"                                                           # ⇡  󰬬 󱦳
+behind = " 󰬦 ${count}"                                                          # ⇣  󰬦 󱦲 
+diverged = " 󰿣 󰬬 ${ahead_count}󰬦${behind_count}"                                # ⇕ ⇡ ⇣ 󰿣 󰬬 
+up_to_date = " 󰠠 "                                                              #    󰆢 󱓻  󰞑   󰞑 󰸠 󰥱 󰻂 󱠇
+untracked = " 󰅙 ${count}"                                                       # ?  󱧧 󰓨 
+stashed = " 󰗠 "                                                                 #     󱗛 
+modified = " 󱍷 ${count}"                                                        #   󱍸 󰣂 󰃨 󰑥  󰟃
+staged = " 󰐗 ${count}"                                                          #    󰁪 󰓦 󰪥 󰮔
+renamed = " 󰀨 ${count}"                                                         # »   󰣁 󰑤 󰋚 
+deleted = " 󰍶 ${count}"                                                         #     󰜺 󰓧 󰚃
 
 [cmd_duration]
 min_time = 1

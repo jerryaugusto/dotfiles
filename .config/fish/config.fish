@@ -13,6 +13,11 @@ if test -f $HOME/.config/fish/exports/path.fish
   source $HOME/.config/fish/exports/path.fish
 end
 
+# Colors
+if test -f $HOME/.config/fish/exports/colors.fish
+  source $HOME/.config/fish/exports/colors.fish
+end
+
 # Other environment variables
 
 set -x OPENAI_API_KEY (pass show job/chatgpt/api/token)
@@ -92,6 +97,23 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# set -x EZA_COLORS "\
+# uu=36:\
+# gu=37:\
+# sn=32:\
+# sb=32:\
+# da=34:\
+# ur=34:\
+# uw=35:\
+# ux=36:\
+# ue=36:\
+# gr=34:\
+# gw=35:\
+# gx=36:\
+# tr=34:\
+# tw=35:\
+# tx=36:"
 
 # PLS-CLI
 set -x PLS_ERROR_LINE_STYLE "#EBA0AC"
