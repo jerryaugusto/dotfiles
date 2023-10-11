@@ -8,11 +8,11 @@ end
 -- local font_name = "BlexMono Nerd Font"
 -- local font_name = "Input Mono"
 -- local font_name = "IosevkaTerm Nerd Font"
-local font_name = "Iosevka Nerd Font"
+-- local font_name = "Iosevka Nerd Font"
 -- local font_name = "FiraCode Nerd Font"
 -- local font_name = "FiraMono Nerd Font"
 -- local font_name = "Inconsolata Nerd Font"
--- local font_name = "JetBrainsMono Nerd Font"
+local font_name = "JetBrainsMono Nerd Font"
 -- local font_name = "SauceCodePro Nerd Font"
 
 return {
@@ -43,7 +43,7 @@ return {
 		-- },
 	},
 	warn_about_missing_glyphs = false,
-	font_size = 11,
+	font_size = 10,
 	line_height = 1.1,
 	dpi = 96.0,
 

@@ -91,6 +91,9 @@ alias vim 'nvim'
 alias af 'asdf'
 alias ranger 'joshuto'
 # alias pomo 'pomo.sh'
+alias curl 'curlie'
+
+alias acento 'setxkbmap -model abnt -layout us -variant intl'
 
 alias copy 'xclip -selection clipboard'
 alias paste 'xclip -selection clipboard -o'
