@@ -1,25 +1,50 @@
 local wezterm = require("wezterm")
 
+local Kanagawa = {
+	colors = {
+		foreground = "#dcd7ba",
+		background = "#1f1f28",
+
+		cursor_bg = "#c8c093",
+		cursor_fg = "#c8c093",
+		cursor_border = "#c8c093",
+
+		selection_fg = "#c8c093",
+		selection_bg = "#2d4f67",
+
+		scrollbar_thumb = "#16161d",
+		split = "#16161d",
+
+		ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
+		brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
+		indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
+	},
+}
+
+local function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Catppuccin Latte"
+	else
+		return "Catppuccin Mocha"
+	end
+end
+
 local function font_with_fallback(name, params)
 	local names = { name, "Apple Color Emoji", "Symbols Nerd Font" }
 	return wezterm.font_with_fallback(names, params)
 end
 
--- local font_name = "BlexMono Nerd Font"
--- local font_name = "Input Mono"
--- local font_name = "IosevkaTerm Nerd Font"
--- local font_name = "Iosevka Nerd Font"
--- local font_name = "FiraCode Nerd Font"
--- local font_name = "FiraMono Nerd Font"
--- local font_name = "Inconsolata Nerd Font"
-local font_name = "JetBrainsMono Nerd Font"
--- local font_name = "SauceCodePro Nerd Font"
+-- local font_name = "Iosevka Comfy"
+-- local font_name = "Iosevka Comfy Wide"
+local font_name = "Hack Nerd Font"
 
 return {
+	color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
+
+	force_reverse_video_cursor = true,
+
 	-- OpenGL for GPU acceleration, Software for CPU
 	front_end = "OpenGL",
-
-	color_scheme = "Catppuccin Mocha",
 
 	-- Font config
 	font = font_with_fallback(font_name),
@@ -44,7 +69,7 @@ return {
 	},
 	warn_about_missing_glyphs = false,
 	font_size = 10,
-	line_height = 1.1,
+	line_height = 1.3,
 	dpi = 96.0,
 
 	-- Cursor style
@@ -73,7 +98,7 @@ return {
 		{
 			key = "q",
 			mods = "CTRL",
-			action = wezterm.action({ CloseCurrentPane = { confirm = false } }),
+			action = wezterm.action({ CloseCurrentPane = { confirm = true } }),
 		},
 		{
 			key = "h",
@@ -173,7 +198,7 @@ return {
 	inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
 	-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	-- window_decorations = "RESIZE", -- NONE, RESIZE, TITLE
-	-- window_background_opacity = 0.75,
+	-- window_background_opacity = 0.5,
 	window_close_confirmation = "NeverPrompt",
 	window_frame = { active_titlebar_bg = "#45475a", font = font_with_fallback(font_name, { bold = true }) },
 }

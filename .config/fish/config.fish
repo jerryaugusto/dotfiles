@@ -13,10 +13,10 @@ if test -f $HOME/.config/fish/exports/path.fish
   source $HOME/.config/fish/exports/path.fish
 end
 
-# Colors
-if test -f $HOME/.config/fish/exports/colors.fish
-  source $HOME/.config/fish/exports/colors.fish
-end
+# Kanagawa Colors
+# if test -f $HOME/.config/fish/exports/kanagawa.fish
+#   source $HOME/.config/fish/exports/kanagawa.fish
+# end
 
 # Other environment variables
 
@@ -116,30 +116,30 @@ set -Ux FZF_DEFAULT_OPTS "\
 # tx=36:"
 
 # PLS-CLI
-set -x PLS_ERROR_LINE_STYLE "#EBA0AC"
-set -x PLS_ERROR_TEXT_STYLE "#F38BA8 bold"
-
-set -x PLS_WARNING_LINE_STYLE "#F9E2AF"
-set -x PLS_WARNING_TEXT_STYLE "#F9E2AF bold"
-
-set -x PLS_UPDATE_LINE_STYLE "#A6E3A1"
-set -x PLS_UPDATE_TEXT_STYLE "#A6E3A1 bold"
-
-set -x PLS_INSERT_DELETE_LINE_STYLE "#CBA6F7"
-
-set -x PLS_INSERT_DELETE_TEXT_STYLE "#9399B2"
-
-set -x PLS_MSG_PENDING_STYLE "#9399B2"
-set -x PLS_TABLE_HEADER_STYLE "#F5C2E7"
-set -x PLS_TASK_DONE_STYLE "#9399B2"
-set -x PLS_TASK_PENDING_STYLE "#CBA6F7"
-set -x PLS_HEADER_GREETINGS_STYLE "#FAB387"
-set -x PLS_QUOTE_STYLE "#9399B2"
-set -x PLS_AUTHOR_STYLE "#9399B2"
-
-set -x PLS_BACKGROUND_BAR_STYLE "bar.back"
-set -x PLS_COMPLETE_BAR_STYLE "bar.complete"
-set -x PLS_FINISHED_BAR_STYLE "bar.finished"
+# set -x PLS_ERROR_LINE_STYLE "#EBA0AC"
+# set -x PLS_ERROR_TEXT_STYLE "#F38BA8 bold"
+#
+# set -x PLS_WARNING_LINE_STYLE "#F9E2AF"
+# set -x PLS_WARNING_TEXT_STYLE "#F9E2AF bold"
+#
+# set -x PLS_UPDATE_LINE_STYLE "#A6E3A1"
+# set -x PLS_UPDATE_TEXT_STYLE "#A6E3A1 bold"
+#
+# set -x PLS_INSERT_DELETE_LINE_STYLE "#CBA6F7"
+#
+# set -x PLS_INSERT_DELETE_TEXT_STYLE "#9399B2"
+#
+# set -x PLS_MSG_PENDING_STYLE "#9399B2"
+# set -x PLS_TABLE_HEADER_STYLE "#F5C2E7"
+# set -x PLS_TASK_DONE_STYLE "#9399B2"
+# set -x PLS_TASK_PENDING_STYLE "#CBA6F7"
+# set -x PLS_HEADER_GREETINGS_STYLE "#FAB387"
+# set -x PLS_QUOTE_STYLE "#9399B2"
+# set -x PLS_AUTHOR_STYLE "#9399B2"
+#
+# set -x PLS_BACKGROUND_BAR_STYLE "bar.back"
+# set -x PLS_COMPLETE_BAR_STYLE "bar.complete"
+# set -x PLS_FINISHED_BAR_STYLE "bar.finished"
 
 # Enable color output for specific commands
 set -x LESS '-R'
@@ -162,6 +162,11 @@ if [ -f $HOME/.config/fish/aliases/main.fish ]
   source $HOME/.config/fish/aliases/main.fish
 end
 
+# Abbreviations
+# if [ -f $HOME/.config/fish/aliases/abbr.fish ]
+#   source $HOME/.config/fish/aliases/abbr.fish
+# end
+
 ## Import Additional Files
 
 # ENV
@@ -170,14 +175,14 @@ if [ -f $HOME/.config/fish/env/index.fish ]
 end
 
 # Git
-if [ -f $HOME/.config/fish/aliases/git.fish ]
-  source $HOME/.config/fish/aliases/git.fish
-end
+# if [ -f $HOME/.config/fish/aliases/git.fish ]
+#   source $HOME/.config/fish/aliases/git.fish
+# end
 
 # Pomo CLI
-if test -e $HOME/.config/fish/functions/pomo-cli.sh
-    source $HOME/.config/fish/functions/pomo-cli.sh
-end
+# if test -e $HOME/.config/fish/functions/pomo-cli.sh
+#     source $HOME/.config/fish/functions/pomo-cli.sh
+# end
 
 
 ## Scripts
@@ -282,6 +287,12 @@ starship init fish | source
 # Zoxide cd alternative
 zoxide init fish | source
 
+# ~/.tmux/plugins
+fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
+# ~/.config/tmux/plugins
+fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
+# ~/.config/fish/config.fish
+set -Ux FZF_TMUX_OPTS "-p 55%,60%"
 
 # Generated for envman. Do not edit.
 test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"

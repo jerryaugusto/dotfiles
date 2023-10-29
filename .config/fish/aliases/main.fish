@@ -92,8 +92,22 @@ alias af 'asdf'
 alias ranger 'joshuto'
 # alias pomo 'pomo.sh'
 alias curl 'curlie'
+alias c 'curl'
 
-alias acento 'setxkbmap -model abnt -layout us -variant intl'
+alias p 'pass'
+alias fullcycle 'pass show -c courses/fullcycle'
+alias twitch 'pass show -c personal/twitch'
+
+# Docker
+alias d 'docker'
+alias dstop 'docker stop $(docker ps -aq)'
+alias drmi 'docker rmi $(docker images -q) -f'
+alias drma 'docker rm $(docker ps -aq) -f'
+alias dcl 'docker stop $(docker ps -aq) && docker rmi $(docker images -q) -f && docker image prune && docker container prune && docker network prune'
+
+# alias proto 'protoc --go_out=application/grpc/pb --go_opt=paths=source_relative --go-grpc_out=application/grpc/pb --go-grpc_opt=paths=source_relative --proto_path=application/grpc/protofiles application/grpc/protofiles/*.proto'
+
+# alias acento 'setxkbmap -model abnt -layout us -variant intl'
 
 alias copy 'xclip -selection clipboard'
 alias paste 'xclip -selection clipboard -o'

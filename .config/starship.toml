@@ -10,7 +10,7 @@ scan_timeout = 1000
 
 # Setups
 format = "$directory$git_branch$character"
-right_format = """$elixir$golang$git_status$cmd_duration"""
+right_format = """$aws$container$docker_context$elixir$golang$kubernetes$git_status$cmd_duration"""
 add_newline = true
 
 # Other languages configurations:
@@ -27,36 +27,62 @@ nodejs.disabled = true
 java.disabled = true
 # golang.disabled = true
 
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold peach'
+symbol = "󱇶  "                                           #   󰀸 󰅟 
+
+[container]
+format = 'on [$symbol \[$name\]]($style) '
+style = "red bold dimmed"
+symbol = ""
+
+[docker_context]
+style = "blue bold"
+symbol = " "       # 󰡨  
+
 [elixir]
-format = " []($style)[$symbol$version](bg:base fg:mauve)[]($style) "
+format = " []($style)[$symbol$version](bg:base fg:oniviolet)[]($style) "
 style = "bg:none fg:base"
 symbol = ' '
 disabled = false
 
 [golang]
-format = " []($style)[$symbol$version](bg:base fg:lavender)[]($style) "
+format = " []($style)[$symbol$version](bg:base fg:mauve)[]($style) "
 style = "bg:none fg:base"
 symbol = ' '
 disabled = false
 
+[kubernetes]
+symbol = '󱃾'                                              # ☸
+disabled = false
+detect_files = ['k8s', 'Dockerfile']
+detect_extensions = ['yaml']
+format = 'on [$symbol$context( \($namespace\))]($style) '
+[kubernetes.context_aliases]
+'arn:aws:eks:us-west-2:123:cluster/gal-kub-demo-cluster' = 'gal'
+
 # Prompt symbols
 [character]
-success_symbol = "[](green bold)" # 
-error_symbol = "[](red bold)"     # 
+success_symbol = "[](green bold)" # 
+error_symbol = "[](red bold)"     # 
 vicmd_symbol = "[](peach)"
 
+[directory.substitutions]
+'$HOME/.config/nvim' = 'Vim'
+
 [directory]
-format = "[]($style)[ ](bg:base fg:pink)[$path](bg:base fg:lavender bold)[ ]($style)"
+format = "[]($style)[ ](bg:base fg:mauve)[$path](bg:base fg:lavender bold)[ ]($style)"
 style = "bg:none fg:base"
 truncation_length = 1
 truncate_to_repo = false
 use_logical_path = true
 fish_style_pwd_dir_length = 1
 disabled = false
-read_only = ' '                                                                         # 
+read_only = ' '                                                                          # 
 
 [git_branch]
-format = "[]($style)[[ ](bg:base fg:green bold)$branch](bg:base fg:lavender)[ ]($style)" #     󰹦 
+format = "[]($style)[[ ](bg:base fg:green bold)$branch](bg:base fg:mauve)[ ]($style)" #     󰹦 
 style = "bg:none fg:base"
 
 [git_status]

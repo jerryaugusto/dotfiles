@@ -80,7 +80,7 @@ function readme
   # set -l mdvp '/home/linuxbrew/.linuxbrew/lib/python3.10/site-packages/mdv/markdownviewer.py'
   for readme in {readme,README}.{md,MD,markdown,mkd,txt,TXT}
     if [ -x $(command -v glow) ]; and [ -f $readme ]
-      mdv $readme
+      glow $readme
     else if [ -f $readme ]
       cat $readme
     end
